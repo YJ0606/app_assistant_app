@@ -1,3 +1,26 @@
-echo .next/ >> .gitignore
-echo dist/ >> .gitignores
-node_modules
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build
+dist/
+.next/
+.turbo/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
