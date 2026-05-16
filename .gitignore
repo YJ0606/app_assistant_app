@@ -1,2 +1,3 @@
-echo "node_modules/" >> .gitignore
+echo .next/ >> .gitignore
+echo dist/ >> .gitignores
 node_modules
