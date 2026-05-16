@@ -1,0 +1,95 @@
+import { PrismaService } from "../../database/prisma.service";
+export declare class AutomationsService {
+    private prisma;
+    constructor(prisma: PrismaService);
+    findAll(tenantId: string): Promise<{
+        id: string;
+        name: string;
+        createdAt: Date;
+        updatedAt: Date;
+        tenantId: string;
+        isActive: boolean;
+        priority: number;
+        description: string | null;
+        trigger: import(".prisma/client").$Enums.AutomationTrigger;
+        conditions: import("@prisma/client/runtime/library").JsonValue | null;
+        actions: import("@prisma/client/runtime/library").JsonValue;
+        runCount: number;
+        lastRunAt: Date | null;
+    }[]>;
+    create(tenantId: string, data: any): Promise<{
+        id: string;
+        name: string;
+        createdAt: Date;
+        updatedAt: Date;
+        tenantId: string;
+        isActive: boolean;
+        priority: number;
+        description: string | null;
+        trigger: import(".prisma/client").$Enums.AutomationTrigger;
+        conditions: import("@prisma/client/runtime/library").JsonValue | null;
+        actions: import("@prisma/client/runtime/library").JsonValue;
+        runCount: number;
+        lastRunAt: Date | null;
+    }>;
+    update(id: string, tenantId: string, data: any): Promise<{
+        id: string;
+        name: string;
+        createdAt: Date;
+        updatedAt: Date;
+        tenantId: string;
+        isActive: boolean;
+        priority: number;
+        description: string | null;
+        trigger: import(".prisma/client").$Enums.AutomationTrigger;
+        conditions: import("@prisma/client/runtime/library").JsonValue | null;
+        actions: import("@prisma/client/runtime/library").JsonValue;
+        runCount: number;
+        lastRunAt: Date | null;
+    }>;
+    toggle(id: string, tenantId: string, isActive: boolean): Promise<{
+        id: string;
+        name: string;
+        createdAt: Date;
+        updatedAt: Date;
+        tenantId: string;
+        isActive: boolean;
+        priority: number;
+        description: string | null;
+        trigger: import(".prisma/client").$Enums.AutomationTrigger;
+        conditions: import("@prisma/client/runtime/library").JsonValue | null;
+        actions: import("@prisma/client/runtime/library").JsonValue;
+        runCount: number;
+        lastRunAt: Date | null;
+    }>;
+    remove(id: string, tenantId: string): Promise<{
+        id: string;
+        name: string;
+        createdAt: Date;
+        updatedAt: Date;
+        tenantId: string;
+        isActive: boolean;
+        priority: number;
+        description: string | null;
+        trigger: import(".prisma/client").$Enums.AutomationTrigger;
+        conditions: import("@prisma/client/runtime/library").JsonValue | null;
+        actions: import("@prisma/client/runtime/library").JsonValue;
+        runCount: number;
+        lastRunAt: Date | null;
+    }>;
+    findOne(id: string, tenantId: string): Promise<{
+        id: string;
+        name: string;
+        createdAt: Date;
+        updatedAt: Date;
+        tenantId: string;
+        isActive: boolean;
+        priority: number;
+        description: string | null;
+        trigger: import(".prisma/client").$Enums.AutomationTrigger;
+        conditions: import("@prisma/client/runtime/library").JsonValue | null;
+        actions: import("@prisma/client/runtime/library").JsonValue;
+        runCount: number;
+        lastRunAt: Date | null;
+    }>;
+}

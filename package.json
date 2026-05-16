@@ -1,0 +1,21 @@
+{
+  "name": "waai-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev:web": "cd apps/web && npm run dev",
+    "dev:api": "cd apps/api && npm run start:dev",
+    "build:web": "cd apps/web && npm run build",
+    "build:api": "cd apps/api && npm run build",
+    "install:web": "cd apps/web && npm install",
+    "install:api": "cd apps/api && npm install",
+    "prisma:migrate": "cd apps/api && npx prisma migrate dev",
+    "prisma:seed": "cd apps/api && npm run prisma:seed",
+    "prisma:studio": "cd apps/api && npx prisma studio"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

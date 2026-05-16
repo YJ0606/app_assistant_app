@@ -1,0 +1,77 @@
+import { CatalogService } from "./catalog.service";
+export declare class CatalogController {
+    private readonly service;
+    constructor(service: CatalogService);
+    list(u: any, q: any): Promise<{
+        id: string;
+        name: string;
+        status: import(".prisma/client").$Enums.CatalogItemStatus;
+        currency: string;
+        createdAt: Date;
+        updatedAt: Date;
+        tenantId: string;
+        category: string | null;
+        stock: number | null;
+        description: string | null;
+        price: import("@prisma/client/runtime/library").Decimal;
+        imageUrl: string | null;
+        sku: string | null;
+        tags: string[];
+        waProductId: string | null;
+        metadata: import("@prisma/client/runtime/library").JsonValue | null;
+    }[]>;
+    create(u: any, body: any): Promise<{
+        id: string;
+        name: string;
+        status: import(".prisma/client").$Enums.CatalogItemStatus;
+        currency: string;
+        createdAt: Date;
+        updatedAt: Date;
+        tenantId: string;
+        category: string | null;
+        stock: number | null;
+        description: string | null;
+        price: import("@prisma/client/runtime/library").Decimal;
+        imageUrl: string | null;
+        sku: string | null;
+        tags: string[];
+        waProductId: string | null;
+        metadata: import("@prisma/client/runtime/library").JsonValue | null;
+    }>;
+    update(u: any, id: string, body: any): Promise<{
+        id: string;
+        name: string;
+        status: import(".prisma/client").$Enums.CatalogItemStatus;
+        currency: string;
+        createdAt: Date;
+        updatedAt: Date;
+        tenantId: string;
+        category: string | null;
+        stock: number | null;
+        description: string | null;
+        price: import("@prisma/client/runtime/library").Decimal;
+        imageUrl: string | null;
+        sku: string | null;
+        tags: string[];
+        waProductId: string | null;
+        metadata: import("@prisma/client/runtime/library").JsonValue | null;
+    }>;
+    remove(u: any, id: string): Promise<{
+        id: string;
+        name: string;
+        status: import(".prisma/client").$Enums.CatalogItemStatus;
+        currency: string;
+        createdAt: Date;
+        updatedAt: Date;
+        tenantId: string;
+        category: string | null;
+        stock: number | null;
+        description: string | null;
+        price: import("@prisma/client/runtime/library").Decimal;
+        imageUrl: string | null;
+        sku: string | null;
+        tags: string[];
+        waProductId: string | null;
+        metadata: import("@prisma/client/runtime/library").JsonValue | null;
+    }>;
+}
