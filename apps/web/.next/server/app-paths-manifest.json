@@ -1,8 +1,10 @@
 {
-  "/page": "app/page.js",
-  "/(marketing)/features/page": "app/(marketing)/features/page.js",
-  "/(auth)/register/page": "app/(auth)/register/page.js",
-  "/(marketing)/pricing/page": "app/(marketing)/pricing/page.js",
-  "/(auth)/login/page": "app/(auth)/login/page.js",
-  "/(marketing)/contact/page": "app/(marketing)/contact/page.js"
+  "/dashboard/conversations/page": "app/dashboard/conversations/page.js",
+  "/dashboard/analytics/page": "app/dashboard/analytics/page.js",
+  "/dashboard/billing/page": "app/dashboard/billing/page.js",
+  "/dashboard/bookings/page": "app/dashboard/bookings/page.js",
+  "/dashboard/catalog/page": "app/dashboard/catalog/page.js",
+  "/dashboard/faq/page": "app/dashboard/faq/page.js",
+  "/dashboard/automations/page": "app/dashboard/automations/page.js",
+  "/dashboard/conversations/[conversationId]/page": "app/dashboard/conversations/[conversationId]/page.js"
 }

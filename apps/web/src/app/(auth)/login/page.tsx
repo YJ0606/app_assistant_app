@@ -1,21 +1,39 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Eye, EyeOff, Loader2 } from "lucide-react";
+import { useLogin } from "@/hooks/use-auth";
 
 export default function LoginPage() {
+  const router = useRouter();
+  const { mutate: login, isPending, error } = useLogin();
   const [showPassword, setShowPassword] = useState(false);
-  const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      window.location.href = "/dashboard";
-    }, 1500);
+    setErrorMessage("");
+    
+    try {
+      login(
+        { email, password },
+        {
+          onSuccess: () => {
+            // Set cookie for middleware and redirect
+            document.cookie = "waai_token=authenticated; path=/; max-age=2592000";
+            router.push("/dashboard");
+          },
+          onError: (err: any) => {
+            setErrorMessage(err?.response?.data?.message || "Login failed. Please try again.");
+          },
+        }
+      );
+    } catch (err) {
+      setErrorMessage("An error occurred. Please try again.");
+    }
   };
 
   return (
@@ -32,6 +50,12 @@ export default function LoginPage() {
         <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
           <h1 className="text-2xl font-bold text-gray-900 mb-1">Welcome back</h1>
           <p className="text-gray-500 text-sm mb-6">Sign in to your WaAI dashboard</p>
+
+          {errorMessage && (
+            <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg text-sm text-red-700">
+              {errorMessage}
+            </div>
+          )}
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
@@ -74,11 +98,11 @@ export default function LoginPage() {
 
             <button
               type="submit"
-              disabled={loading}
+              disabled={isPending}
               className="w-full bg-brand-500 hover:bg-brand-600 disabled:opacity-60 text-white font-semibold py-2.5 rounded-lg text-sm transition-colors flex items-center justify-center gap-2"
             >
-              {loading && <Loader2 className="w-4 h-4 animate-spin" />}
-              {loading ? "Signing in..." : "Sign In"}
+              {isPending && <Loader2 className="w-4 h-4 animate-spin" />}
+              {isPending ? "Signing in..." : "Sign In"}
             </button>
           </form>
 

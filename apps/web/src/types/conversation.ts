@@ -5,7 +5,8 @@ export interface Conversation {
   assignedUserId?: string;
   status: ConversationStatus;
   isAiActive: boolean;
-  channel: string;
+  channel: "WHATSAPP" | "SMS" | "EMAIL" | "PHONE";
+  whatsappPhone?: string;
   lastMessageAt?: string;
   resolvedAt?: string;
   customer?: Customer;
@@ -24,11 +25,13 @@ export type ConversationStatus =
 export interface Message {
   id: string;
   conversationId: string;
+  channel: "WHATSAPP" | "SMS" | "EMAIL" | "PHONE";
   direction: "INBOUND" | "OUTBOUND";
   type: MessageType;
   status: MessageStatus;
   content?: string;
   mediaUrl?: string;
+  mediaType?: string;
   isAiGenerated: boolean;
   sentByUserId?: string;
   createdAt: string;

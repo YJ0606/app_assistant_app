@@ -11,40 +11,115 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/(marketing)/features/page": [
+    "/(marketing)/demo/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(marketing)/features/page.js"
+      "static/chunks/app/(marketing)/demo/page.js"
     ],
     "/(marketing)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(marketing)/layout.js"
     ],
-    "/(marketing)/pricing/page": [
+    "/(auth)/login/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(marketing)/pricing/page.js"
-    ],
-    "/(auth)/register/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(auth)/register/page.js"
+      "static/chunks/app/(auth)/login/page.js"
     ],
     "/(auth)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(auth)/layout.js"
     ],
-    "/(auth)/login/page": [
+    "/(auth)/register/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(auth)/login/page.js"
+      "static/chunks/app/(auth)/register/page.js"
     ],
-    "/(marketing)/contact/page": [
+    "/onboarding/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(marketing)/contact/page.js"
+      "static/chunks/app/onboarding/page.js"
+    ],
+    "/dashboard/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/page.js"
+    ],
+    "/dashboard/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/layout.js"
+    ],
+    "/dashboard/conversations/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/conversations/page.js"
+    ],
+    "/dashboard/automations/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/automations/page.js"
+    ],
+    "/dashboard/billing/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/billing/page.js"
+    ],
+    "/dashboard/analytics/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/analytics/page.js"
+    ],
+    "/dashboard/orders/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/orders/page.js"
+    ],
+    "/dashboard/bookings/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/bookings/page.js"
+    ],
+    "/dashboard/catalog/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/catalog/page.js"
+    ],
+    "/dashboard/settings/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/settings/page.js"
+    ],
+    "/dashboard/settings/whatsapp/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/settings/whatsapp/page.js"
+    ],
+    "/dashboard/team/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/team/page.js"
+    ],
+    "/dashboard/conversations/[conversationId]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/conversations/[conversationId]/page.js"
+    ],
+    "/dashboard/settings/business-hours/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/settings/business-hours/page.js"
+    ],
+    "/dashboard/bookings/calendar/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/bookings/calendar/page.js"
+    ],
+    "/dashboard/faq/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/faq/page.js"
     ]
   }
 }
